@@ -128,9 +128,53 @@ describe('divide', () => {
 
 describe('modulus', () => {
 
+  test('can find the modulus of two small numbers', () => {
+    expected = 0; 
+    actual = modulus(6, 6); 
+    expect(actual).toBe(expected); 
+  })
+
+  test('can find the modulus of two large numbers', () => {
+    expected = 14; 
+    actual = modulus(1078, 56); 
+    expect(actual).toBe(expected); 
+  })
+
+  test('can find the modulus of a negative number', () => {
+    expected = -2; 
+    actual = modulus(-10, 8); 
+    expect(actual).toBe(expected); 
+  })
+
+  test('can find the modulus of two negative numbers', () => {
+    expected = -2; 
+    actual = modulus(-10, -8); 
+    expect(actual).toBe(expected); 
+  })
+
+  test('can find the negative modulus of a numbers', () => {
+    expected = 2; 
+    actual = modulus(10, -8); 
+    expect(actual).toBe(expected); 
+  })
+
+  test('can find the 0 modul of a number', () => {
+    expected = NaN; 
+    actual = modulus(10, 0); 
+    expect(actual).toBe(expected); 
+  })
+
+
+
 });
 
 describe('even', () => {
+
+  test("is number even", () => {
+    expected = true;
+    actual = even(660);
+    expect(actual).toBe(expected)
+  })
 
 });
 
