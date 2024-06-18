@@ -176,8 +176,39 @@ describe('even', () => {
     expect(actual).toBe(expected)
   })
 
+  test("number not even", () => {
+    expected = false;
+    actual = even(1673);
+    expect(actual).toBe(expected)
+  })
+
+  test("0 is even", () => {
+    expected = true;
+    actual = even(0);
+    expect(actual).toBe(expected)
+  })
+
+
 });
 
 describe('odd', () => {
+
+  test("is number odd", () => {
+    expected = true;
+    actual = odd(8397594359);
+    expect(actual).toBe(expected)
+  })
+
+  test("number not odd", () => {
+    expected = false;
+    actual = odd(88746);
+    expect(actual).toBe(expected)
+  })
+
+  test("0 is odd", () => {
+    expected = false;
+    actual = odd(0);
+    expect(actual).toBe(expected)
+  })
 
 });
